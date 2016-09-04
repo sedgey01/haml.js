@@ -360,6 +360,16 @@ describe('haml', function () {
       });
     });
 
+    describe('angular', function () {
+      it('should not treat lines {{}} as attributes', function () {
+        assert('angular.line.interpolation')
+      });
+
+      it('should not treat attribute values with {{}} as attributes', function () {
+        assert('angular.attrs.interpolation')
+      });
+    });
+
     describe('bug fixes', function () {
       it('#8 code block', function () {
         assert('issue.#8', { locals: { items: ['foo', 'bar', 'baz'] }});
