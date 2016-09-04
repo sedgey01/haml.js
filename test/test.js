@@ -370,6 +370,16 @@ describe('haml', function () {
       });
     });
 
+    describe('symbols', function () {
+      it('should treat symbol attribute values as strings', function () {
+        assert('symbols');
+      });
+
+      it('should handle multiple symbol attribute values', function () {
+        assert('symbols.multiple');
+      });
+    });
+
     describe('bug fixes', function () {
       it('#8 code block', function () {
         assert('issue.#8', { locals: { items: ['foo', 'bar', 'baz'] }});
