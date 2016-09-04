@@ -152,6 +152,10 @@ describe('haml', function () {
       it('should allow empty tags', function () {
         assert('tag.empty');
       });
+
+      it('should allow _ in tags', function () {
+        assert('tag.underscore');
+      });
     });
 
     describe('%tag.class', function () {
