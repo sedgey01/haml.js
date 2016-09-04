@@ -107,6 +107,10 @@ describe('haml', function () {
         assert('newlines');
       });
 
+      it('should support double blank lines', function () {
+        assert('newlines.double');
+      });
+
       it('should support blank lines within tags', function () {
         assert('newlines.within-tags');
       });
