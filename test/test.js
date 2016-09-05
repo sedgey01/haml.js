@@ -27,7 +27,7 @@ describe('haml', function () {
     it('should render the given file', function (done) {
       haml.renderFile(__dirname + '/fixtures/class.haml', 'utf8', {}, function (err, html) {
         html = html.trim()
-        var expected = fs.readFileSync(__dirname + '/fixtures/class.html').toString()
+        var expected = fs.readFileSync(__dirname + '/fixtures/class.html').toString().trim()
 
         html.should.equal(expected)
 
